@@ -1,0 +1,143 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'motion-ui';
+@import "bourbon";
+
+@include foundation-global-styles;
+//@include foundation-grid;
+// @include foundation-flex-grid;
+@include foundation-xy-grid-classes;
+@include foundation-typography;
+@include foundation-button;
+@include foundation-forms;
+// @include foundation-range-input;
+@include foundation-accordion;
+@include foundation-accordion-menu;
+@include foundation-badge;
+@include foundation-breadcrumbs;
+@include foundation-button-group;
+@include foundation-callout;
+@include foundation-card;
+@include foundation-close-button;
+@include foundation-menu;
+@include foundation-menu-icon;
+@include foundation-drilldown-menu;
+@include foundation-dropdown;
+@include foundation-dropdown-menu;
+@include foundation-responsive-embed;
+@include foundation-label;
+@include foundation-media-object;
+@include foundation-off-canvas;
+@include foundation-orbit;
+@include foundation-pagination;
+@include foundation-progress-bar;
+// @include foundation-progress-element;
+// @include foundation-progress-element;
+// @include foundation-meter-element;
+@include foundation-slider;
+@include foundation-sticky;
+@include foundation-reveal;
+@include foundation-switch;
+@include foundation-table;
+@include foundation-tabs;
+@include foundation-thumbnail;
+@include foundation-title-bar;
+@include foundation-tooltip;
+@include foundation-top-bar;
+@include foundation-visibility-classes;
+// @include foundation-float-classes;
+@include foundation-flex-classes;
+
+// @include foundation-prototype-classes;
+
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
+
+//Personal Sizing Classes
+.full-height{
+    min-height: 100vh;
+}
+
+// Main CSS
+body {
+background-color: darkslategray;
+}
+a {color: $medium-gray}
+a:hover {color: #62ccc6}
+a:active {color: #62ccc6}
+h1{}
+h2{}
+h3{}
+h4{}
+h5{}
+h6{}
+p{}
+button{}
+
+
+.container{
+background-color: $white;
+}
+
+.side-nav{
+    padding: 35px 30px 0px 30px;
+    border-right: 1px solid $light-gray;
+    min-width: 250px;
+
+    .an-logo{
+        background: url(../assets/SVG/an-logo.svg) no-repeat center;
+        min-height: 70px;
+    }
+    .menu-arrow{
+        background:  url(../assets/arrow-collapse.png) no-repeat right;
+    }
+    .menu a{
+        margin: 0;
+        padding: .6rem 0 .5rem 0;
+    }
+    ul{
+        li{
+        }
+        padding-top: 75px;
+        h2{
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-transform: uppercase;
+            border-bottom: 1px solid $light-gray;
+
+        }
+        .nested {
+            padding-top: 0;
+            a {
+                text-transform: none;
+                border: none;
+            }
+        }
+    }
+
+}
+
+.main-col{
+    padding: 0 30px 0 30px;
+    .button{
+        margin: 0 auto;
+    }
+
+    .project-container{
+        border-bottom: 1px dashed $light-gray;
+        padding: 30px 0  45px 0;
+
+
+    }
+
+}
+
+
+
