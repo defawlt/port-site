@@ -66,14 +66,24 @@ body {
 background-color: darkslategray;
 }
 a {color: $medium-gray}
-a:hover {color: #62ccc6}
-a:active {color: #62ccc6}
-h1{}
-h2{}
-h3{}
-h4{}
+a:hover {color: $primary-color}
+a:active {color: $primary-color}
+h1{
+    font-weight: bold;
+}
+h2{
+    color: $medium-gray;
+}
+h3{
+    color: $secondary-color;
+    font-weight: bold;
+    vertical-align: middle;
+}
+h4{
+    color: $medium-gray;
+}
 h5{}
-h6{}
+h6{ font-family: "europa";}
 p{}
 button{}
 
@@ -126,17 +136,63 @@ background-color: $white;
 
 .main-col{
     padding: 0 30px 0 30px;
+    img{margin: 0 0 15px 0;}
     .button{
-        margin: 0 auto;
+        margin: 30px auto;
+        font-size: 20px;
+        color: $black;
+        background: $white;
+        font-weight: normal;
+        border: 2px solid $black;
+        border-radius: 3px;
+        width: 480px;
+    }
+    .button:hover{
+//        margin: 0 auto;
+        font-size: 20px;
+        color: $white;
+        background: $dark-gray;
+        border: 2px solid $dark-gray;
     }
 
     .project-container{
         border-bottom: 1px dashed $light-gray;
         padding: 30px 0  45px 0;
 
+        &.work-samples{
+            padding: 15px 0;
+            h2 {
+                font-weight: bolder;
+                margin:0;
+                padding: 0 0 0 10px;
+                text-transform: uppercase;
+            }
+        }
+        .down-arrows img{
+            transform: rotate(90deg);
+            max-height: 40px;
+            margin-right: 5px
+        }
+
+        .client-name{
+            color:$primary-color;
+        }
 
     }
 
+    .knewton-logo{
+        background: url('../assets/knewton-logo.png') no-repeat top;
+    }
+
+    .ga-jumbo{
+        min-height: 525px;
+        margin: 0 auto;
+        background:#000 url(../assets/GA.png) no-repeat center;
+        margin: 0 0 15px 0;
+        img{
+            margin: 0 auto;
+        }
+    }
 }
 
 
