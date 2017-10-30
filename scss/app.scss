@@ -83,7 +83,9 @@ h4{
     color: $medium-gray;
 }
 h5{}
-h6{ font-family: "europa";}
+h6{ font-family: "ff-ernestine-pro";
+    width: 60%;
+    margin: 0 auto;}
 p{}
 button{}
 
@@ -137,6 +139,9 @@ background-color: $white;
 .main-col{
     padding: 0 30px 0 30px;
     img{margin: 0 0 15px 0;}
+    .spacer{
+        background: $light-gray;
+    }
     .button{
         margin: 30px auto;
         font-size: 20px;
@@ -179,7 +184,11 @@ background-color: $white;
         }
 
     }
-
+    .intro{
+        .prism{
+            margin: 45px auto 15px auto;
+        }
+    }
     .knewton-logo{
         background: url('../assets/knewton-logo.png') no-repeat top;
     }
