@@ -54,6 +54,17 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/arrow2.png": {
+		"ft": 32768,
+		"iS": 437,
+		"oA": 0,
+		"oAP": "\/assets\/arrow2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/cassandra-section.png": {
 		"ft": 32768,
 		"iS": 456839,
