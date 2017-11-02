@@ -167,6 +167,7 @@ background-color: $white;
     h6{
         margin:0;
         text-align: left;
+
     }
 
     .spacer{
@@ -196,15 +197,18 @@ background-color: $white;
         height: 30px;
         background: $light-gray;
         box-shadow: inset 0px 4px 9px -5px rgba(0,0,0,0.55);
-
         }
+    .dashed-divider {
+            border-top: 1px dashed $medium-gray;
+            margin-top: 15px;
+            padding-top:30px;
+        }
+
+
 
     .project-container{
         padding: 30px 30px 45px 30px;
-//        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.125);
-        h1{
-            margin-left:15px;
-        }
+        h1{}
 
         h3{display: inline-block;
             vertical-align: middle;
@@ -214,14 +218,10 @@ background-color: $white;
             padding: 2px 5px;
             margin: 5px 5px 5px 30px;
             }
-        h4{display: inline-block;
-            vertical-align: middle;
-            }
 
-        &.work-samples{
-            padding: 15px 30px;
-            border-bottom: 1px dashed $medium-gray;
-        }
+        h4{display: inline-block;vertical-align: middle;}
+
+        &.work-samples{padding: 15px 30px; border-bottom: 1px dashed $medium-gray;}
 
         .down-arrows img{
             height: 26px;
@@ -229,12 +229,10 @@ background-color: $white;
             vertical-align: middle;
         }
 
-        .client-name{
-            color:$dark-gray;
-
-        }
-
+        .client-name{color:$dark-gray;}
+        .client-lockup{ margin: 15px 0;}
     }
+
     .intro{
         .prism{
             margin: 45px auto 15px auto;
@@ -271,5 +269,9 @@ background-color: $white;
     }
 }
 
+
+footer{
+    padding-bottom: 30px;
+}
 
 
