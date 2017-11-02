@@ -60,11 +60,10 @@
 .full-height{
     min-height: 100vh;
 }
+// My Sass
 
 // Main CSS
-body {
-background-color: darkslategray;
-}
+body {}
 a {color: $medium-gray}
 a:hover {color: $primary-color}
 a:active {color: $primary-color}
@@ -87,7 +86,6 @@ h4{
 h5{}
 h6{ font-family: "clarendon-text-pro";
     font-style: italic;
-    text-align: center;
     font-weight: 700;
     width: 60%;
     margin: 0 auto;}
@@ -100,9 +98,13 @@ background-color: $white;
 }
 
 .side-nav{
-    padding: 35px 30px 0px 30px;
-    border-right: 1px solid $light-gray;
+    padding: 30px 30px 0px 30px;
+    border-left: 1px solid $light-gray;
     min-width: 250px;
+    position: fixed;
+    right:0;
+    top:0;
+    background: $white;
 
     .an-logo{
         background: url(../assets/SVG/an-logo.svg) no-repeat center;
@@ -143,24 +145,29 @@ background-color: $white;
 
 .main-col{
     padding: 0 30px 0 30px;
+    padding-right: 280px;
 
     img {margin: 0 0 5px 0;}
 
 
-    h3 {padding:0;
+    h4 {padding:0;
         margin:0;
-        display:inline-block;
         }
 
     h3 {padding:0;
         margin:0;
-        display:inline-block;
         }
 
     h2 {padding:0;
         margin:0;
-
         }
+    p {padding:0;
+        margin:0;
+        }
+    h6{
+        margin:0;
+        text-align: left;
+    }
 
     .spacer{
         background: $light-gray;
@@ -185,6 +192,19 @@ background-color: $white;
     }
 
     .project-container{
+        h3{display: inline-block;
+            vertical-align: middle;
+            background: $secondary-color;
+            color: $white;
+            font-weight: normal;
+            padding: 2px 5px;
+            margin: 5px;
+            }
+        h4{display: inline-block;
+            vertical-align: middle;
+            }
+
+
         border-bottom: 1px dashed $light-gray;
         padding: 30px 0  45px 0;
 
@@ -208,6 +228,10 @@ background-color: $white;
         .prism{
             margin: 45px auto 15px auto;
         }
+        h6{
+            text-align: center;
+            margin: 0 auto;
+        }
     }
     .knewton-logo{
         background: url('../assets/knewton-logo.png') no-repeat top;
@@ -222,6 +246,17 @@ background-color: $white;
         img{
             margin: 0 auto;
         }
+    }
+
+    .ob-jumbo{
+    min-height: 525px;
+    margin: 0 auto;
+    background:#fff url(../assets/OB.png) no-repeat center;
+    margin: 0 0 15px 0;
+
+    img{
+        margin: 0 auto;
+    }
     }
 }
 
