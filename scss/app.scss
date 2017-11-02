@@ -182,6 +182,7 @@ background-color: $white;
         border: 2px solid $black;
         border-radius: 3px;
         width: 480px;
+
     }
     .button:hover{
 //        margin: 0 auto;
@@ -191,13 +192,18 @@ background-color: $white;
         border: 2px solid $dark-gray;
     }
 
-    .project-container{
-//        border-bottom: 1px dashed $medium-gray;
-        padding: 30px 30px 45px 30px;
+    .card-divider{
+        height: 30px;
+        background: $light-gray;
+        box-shadow: inset 0px 4px 9px -5px rgba(0,0,0,0.55);
 
-        .card-divider{
-            height: 30px;
-            background: $light-gray;
+        }
+
+    .project-container{
+        padding: 30px 30px 45px 30px;
+//        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.125);
+        h1{
+            margin-left:15px;
         }
 
         h3{display: inline-block;
@@ -206,7 +212,7 @@ background-color: $white;
             color: $white;
             font-weight: normal;
             padding: 2px 5px;
-            margin: 5px;
+            margin: 5px 5px 5px 30px;
             }
         h4{display: inline-block;
             vertical-align: middle;
