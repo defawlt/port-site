@@ -212,14 +212,19 @@ background-color: $white;
 
         h3{display: inline-block;
             vertical-align: middle;
-            background: $secondary-color;
-            color: $white;
-            font-weight: normal;
+//            background: $secondary-color;
+            color: $secondary-color;
+            font-weight: 900;
             padding: 2px 5px;
-            margin: 5px 5px 5px 30px;
+//            margin: 5px 5px 5px 30px;
             }
+        .cat-roles{
+            text-align: right;
+            float: right;
+        }
 
-        h4{display: inline-block;vertical-align: middle;}
+        h4
+        {display: inline-block;vertical-align: middle;}
 
         &.work-samples{padding: 15px 30px; border-bottom: 1px dashed $medium-gray;}
 
@@ -288,4 +293,6 @@ footer{
 
 }
 
+
+.cass{}
 

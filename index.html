@@ -8,6 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aaron Neeley Desiger</title>
     <link rel="stylesheet" href="css/app.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/what-input/dist/what-input.js"></script>
+    <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
+
+
   </head>
   <body>
         <div class="container grid-x cell small-margin-collapse">
@@ -24,7 +29,7 @@
                     <li><a href = "#"><h2>About</h2></a></li>
                     <li><a href = "#"><h2>Select Work</h2></a></li>
                         <ul class="nested vertical menu">
-                            <li><a href="#">Cassandra</a></li>
+                            <li class="cass"><a href="#">Cassandra</a></li>
                             <li><a href="#">Knewton</a></li>
                             <li><a href="#">General Assembly</a></li>
                             <li><a href="#">Spring</a></li>
@@ -69,14 +74,16 @@
 
             <div class="project-container grid-x cell cassandra">
             <div class="small-12"><img src="assets/cassandra-section@2x.png"></div>
-                    <div class="client-name small-12"><h1>Cassandra.co</h1></div>
-                   <div class="small-12 cell">
+                    <div class="client-name small-4"><h1>Cassandra.co</h1></div>
+                   <div class="small-8 cell">
                        <h3>Category:</h3>
                        <h4>Web-platform, large scale, Editorial content advertising/marketing</h4>
+                       <br>
+                       <h3>Roles:</h3>
+                        <h4>Research, Design, Strategy</h4>
                    </div>
                     <div class="small-12 cell">
-                        <h3>Roles:</h3>
-                        <h4>Research, Design, Strategy</h4>
+
                     </div>
                     <div class=" small-12 cell"></div>
                     <div class="dashed-divider small-12 cell"><h6>Large Problem:</h6>
@@ -92,15 +99,14 @@
             <div class="card-divider small-12 cell"></div>
             <div class="project-container grid-x cell knewton">
                 <div class="small-12"><img src="assets/knewton-sketching@2x.png"></div>
-                <div class="client-name small-12 auto"><h1>Knewton</h1></div>
-                       <div class="small-12 cell">
+                <div class="client-name small-4 auto"><h1>Knewton</h1></div>
+                       <div class="small-8 cell">
                            <h3>Category</h3>
                            <h4>Web-platform, large scale, Editorial content advertising/marketing</h4>
-                       </div>
-                        <div class="small-12 cell">
-                            <h3>Roles</h3>
+                           <br>
+                           <h3>Roles</h3>
                             <h4>Research, Design, Strategy</h4>
-                        </div>
+                       </div>
                         <a class="button">Download Cassandra Case Study</a>
             </div>
 <!-- Knewton Project Cell Ends-->
@@ -110,14 +116,16 @@
                 <div class="ga-jumbo small-12 cell">
 
                 </div>
-                  <div class="client-name small-12 auto"><h1>General Assembly</h1></div>
-                   <div class="small-12 cell">
+                  <div class="client-name small-4 auto"><h1>General Assembly</h1></div>
+                   <div class="small-8 cell cat-roles">
                        <h3>Category</h3>
                        <h4>Web-platform, large scale, Editorial content advertising/marketing</h4>
+                       <br>
+                       <h3>Roles</h3>
+                        <h4>Research, Design, Strategy</h4>
                    </div>
                     <div class="small-12 cell">
-                        <h3>Roles</h3>
-                        <h4>Research, Design, Strategy</h4>
+
                     </div>
                     <a class="button">Request more info</a>
             </div>
@@ -127,13 +135,12 @@
             <div class="project-container grid-x cell spring">
                 <div class=" small-12 cell"></div>
                 <div class="small-12"><img src="assets/spring-2x.png"></div>
-                <div class="client-name small-12 cell"><h1>Spring</h1></div>
-                <div class="small-12 cell">
+                <div class="client-name small-4 cell"><h1>Spring</h1></div>
+                <div class="small-8 cell cat-roles">
                     <h3>Category</h3>
                     <h4>E-Commerce, Fashion, mobile, advanced prototyping</h4>
-                </div>
-                <div class="small-12 cell">
-                    <h3>Roles</h3>
+                    <br>
+                                        <h3>Roles</h3>
                     <h4>Prototyping, Design Process Consulting</h4>
                 </div>
             </div>
@@ -143,13 +150,12 @@
             <div class="project-container grid-x cell ob">
                 <div class="ob-jumbo small-12 cell">
                 </div>
-                <div class="client-name small-12 cell"><h1>Outbrain</h1></div>
+                <div class="client-name small-4 cell"><h1>Outbrain</h1></div>
 
-                <div class="small-12 cell">
+                <div class="small-8 cell cat-roles">
                     <h3>Category</h3>
                     <h4>AdTech, Big-Data</h4>
-                </div>
-                <div class="small-12 cell">
+                    <br>
                     <h3>Roles</h3>
                     <h4>Manager, Lead Designer, Design Advocate</h4>
                 </div>
@@ -175,9 +181,21 @@
         </footer>
 
 <!--scripts-->
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/what-input/dist/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/js/foundation.js"></script>
     <script src="js/min/app-min.js"></script>
+<!--
+   <script>
+      $(document).ready(function() {
+      alert("document ready occurred!");
+    $('.cass').click (function() {
+        alert("cassy cass was clicked");
+    });
+});
+      </script>
+-->
+
   </body>
 </html>
