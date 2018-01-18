@@ -45,17 +45,6 @@
 		"oT": 1,
 		"q": 100
 		},
-	"\/assets\/arrow-collapse.png": {
-		"ft": 32768,
-		"iS": 923,
-		"oA": 0,
-		"oAP": "\/assets\/arrow-collapse.png",
-		"oF": 0,
-		"oIPL": 1,
-		"opt": 1,
-		"oT": 1,
-		"q": 100
-		},
 	"\/assets\/arrow2.png": {
 		"ft": 32768,
 		"iS": 437,
@@ -83,6 +72,17 @@
 		"iS": 1715906,
 		"oA": 0,
 		"oAP": "\/assets\/cassandra-section@2x.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/close-this.png": {
+		"ft": 32768,
+		"iS": 923,
+		"oA": 0,
+		"oAP": "\/assets\/close-this.png",
 		"oF": 0,
 		"oIPL": 1,
 		"opt": 1,
@@ -171,6 +171,17 @@
 		"iS": 69291,
 		"oA": 0,
 		"oAP": "\/assets\/OB@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/open-this.png": {
+		"ft": 32768,
+		"iS": 2846,
+		"oA": 0,
+		"oAP": "\/assets\/open-this.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
