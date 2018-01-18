@@ -10,9 +10,9 @@ $(document).ready(function() {
 //    $('.cass').click (function() {
 //        alert("cassy cass was clicked");
 //        });
-    $('.knew').click (function() {
-        alert("KNEWTON was clicked");
-        });
+//    $('.knew').click (function() {
+//        alert("KNEWTON was clicked");
+//        });
 
 //Toggle the side nav
 
@@ -28,15 +28,43 @@ $('.open-this').click (function() {
     });
 
 //Scroll to Position on Home page
-//Top of page
+//Scroll Top of page
 $('.an-logo').click(function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
     return false;
 });
 
-//Cassandra Tile
+//Scroll Cassandra Tile
 $(function() { $(".cass").click(function() {
     var position = $(".cassandra").offset().top;
+    $("HTML, BODY").animate({ scrollTop: position }, 500);
+    });
+});
+
+//Scroll Knewton Tile
+$(function() { $(".knew").click(function() {
+    var position = $(".knewton").offset().top;
+    $("HTML, BODY").animate({ scrollTop: position }, 500);
+    });
+});
+
+//Scroll General Assembly Tile
+$(function() { $(".gene").click(function() {
+    var position = $(".ga").offset().top;
+    $("HTML, BODY").animate({ scrollTop: position }, 500);
+    });
+});
+
+//Scroll Spring Tile
+$(function() { $(".spri").click(function() {
+    var position = $(".spring").offset().top;
+    $("HTML, BODY").animate({ scrollTop: position }, 500);
+    });
+});
+
+//Scroll Outbrain Tile
+$(function() { $(".outb").click(function() {
+    var position = $(".outbrain").offset().top;
     $("HTML, BODY").animate({ scrollTop: position }, 500);
     });
 });
