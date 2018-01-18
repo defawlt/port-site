@@ -18,13 +18,21 @@ $(document).ready(function() {
 
 //Toggle Menu icon
 $('.close-this').click (function() {
-        $(this).toggle();
+        $(this).css({"opacity":"0"});
         $('.open-this').toggle();
+        $('.side-nav').css({"right":"-250px"});
+        $('.main-col').css({"padding-right":"0"});
+        $('img-padding').css({"padding":"0"})
+        $('footer').css({"padding-right":"0"});
     });
 
 $('.open-this').click (function() {
         $(this).toggle();
-        $('.close-this').toggle();
+        $('.close-this').css({"opacity":"1"});
+        $('.side-nav').css({"right":"0"});
+        $('.main-col').css({"padding-right":"250px"});
+        $('footer').css({"padding-right":"30"});
+
     });
 
 //Scroll to Position on Home page
