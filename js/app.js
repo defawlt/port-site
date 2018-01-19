@@ -3,6 +3,12 @@
 //$('a').click (function() {
 //    alert("a link was clicked");
 //});
+//
+
+//import $ from 'jquery';
+
+window.$ = $;
+window.jQuery = $;
 
 $(document).ready(function() {
 //        testing the jquery load

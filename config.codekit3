@@ -5428,6 +5428,20 @@
 		"oAP": "\/bower_components\/what-input\/yarn.lock",
 		"oF": 0
 		},
+	"\/case-studies\/cassandra-casestudy-ux.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/case-studies\/cassandra-casestudy-ux.pdf",
+		"oF": 0
+		},
+	"\/case-studies\/knewton-caseStudy-UX.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/case-studies\/knewton-caseStudy-UX.pdf",
+		"oF": 0
+		},
 	"\/CHANGELOG.md": {
 		"cB": 0,
 		"cS": 0,
@@ -5461,6 +5475,13 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/faq.html",
+		"oF": 0
+		},
+	"\/faq2.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/faq2.html",
 		"oF": 0
 		},
 	"\/index.html": {
