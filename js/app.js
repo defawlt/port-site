@@ -89,12 +89,12 @@ $(window).scroll(function() {
     if (scroll >= 30) {
         //clearHeader, not clearheader - caps H
         $(".header").addClass("min");
-        $('.side-nav').addClass('min');
+        $('.close-this').addClass('min');
         $('.open-this').addClass("min");
         $(".hello-here").css("display","none");
     } else{
         $(".header").removeClass("min");
-        $('.side-nav').removeClass('min');
+        $('.close-this').removeClass('min');
         $('.open-this').removeClass("min");
         $(".hello-here").css("display","inline-block");
     }
