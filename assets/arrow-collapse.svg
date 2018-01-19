@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="59px" viewBox="0 0 59 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-collapse</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home-Copy-6" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-158.000000, -35.000000)">
+        <g id="arrow-collapse" transform="translate(157.000000, 35.000000)">
+            <path d="M1.4880708,28.6679687 L58.671014,28.6679688" id="Path-2" stroke="#979797"></path>
+            <polyline id="Path-4" stroke="#979797" points="47.4746094 0.08984375 59.0429688 29.0378696 47.2167969 58.1484375"></polyline>
+            <text id="Close-This" font-family="ClarendonTextPro-Italic, Clarendon Text Pro" font-size="14" font-style="italic" font-weight="normal" line-spacing="28" fill="#CCCCCC">
+                <tspan x="7" y="13">Close</tspan>
+                <tspan x="7" y="41">This</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
