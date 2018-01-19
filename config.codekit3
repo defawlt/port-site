@@ -45,6 +45,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/arrow-collapse.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/arrow-collapse.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/assets\/arrow2.png": {
 		"ft": 32768,
 		"iS": 437,
@@ -88,6 +98,16 @@
 		"opt": 1,
 		"oT": 1,
 		"q": 100
+		},
+	"\/assets\/close-this.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/close-this.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/assets\/GA.png": {
 		"ft": 32768,
@@ -187,6 +207,16 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"\/assets\/Open-this.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/Open-this.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/assets\/penrose-a.svg": {
 		"ft": 2097152,

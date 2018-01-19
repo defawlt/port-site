@@ -98,9 +98,11 @@ background-color: $white;
 }
 
 .side-nav{
-    padding: 30px 30px 0px 30px;
+    padding: 1px 30px 0px 30px;
+    transition: padding 150ms;
     border-left: 1px solid $medium-gray;
     min-width: 250px;
+    max-width: 250px;
     transition: right 500ms;
     position: fixed;
     right:0;
@@ -108,6 +110,10 @@ background-color: $white;
     background: $white;
     z-index: 1000;
 
+    &.min {
+        padding-top:1px;
+        transition: padding-top 150ms;
+    }
 
     .menu-arrow{
         background: url(../assets/arrow-collapse.png) no-repeat right;
@@ -117,9 +123,8 @@ background-color: $white;
         padding: .6rem 0 .5rem 0;
     }
     ul{
-        li{
-        }
-        padding-top: 75px;
+        li{}
+        padding-top: 85px;
         h2{
             font-weight: bold;
             margin: 0;
@@ -145,13 +150,15 @@ background-color: $white;
 .main-col{
     position:relative;
     padding-right: 250px;
-    transition: padding 500ms;
+    padding-top: 150px;
+    transition: padding 150ms;
+
     .an-logo{
         background: url(../assets/penrose-a.svg) no-repeat center;
         height: 100px;
         width: 97px;
         display: inline-block;
-
+        transition: height 150ms;
     }
     .hello-here{
         display: inline-block;
@@ -159,6 +166,8 @@ background-color: $white;
         margin-top: -4px;
         width: 360px;
         vertical-align: top;
+        display: inline-block;
+
         h1{
             margin-top: -3px;
             line-height: 38px;
@@ -227,7 +236,14 @@ background-color: $white;
 
     .img-padding{
         padding: 0 30px;
-        transition: padding 500ms;
+        transition: padding 400ms;
+    }
+
+    .full-width-image{
+        img{
+        width: 100%;
+        transition: width 400ms;
+        }
     }
     .project-container{
         padding: 30px 30px 45px 30px;
@@ -249,7 +265,11 @@ background-color: $white;
         h4
         {display: inline-block;vertical-align: middle;}
 
-        &.work-samples{padding: 15px 30px; border-bottom: 1px dashed $medium-gray;}
+        &.work-samples{
+            padding: 15px 30px;
+            border-bottom: 1px dashed $medium-gray;
+            margin-bottom: 30px;
+        }
 
         .down-arrows img{
             height: 26px;
@@ -262,17 +282,40 @@ background-color: $white;
     }
 
     .intro{
+        position: relative;
         .h2{
             font-size: 24px;
         }
-        .prism{
-            margin: 45px auto 15px auto;
-        }
+        .prism{}
         h6{
             text-align: left;
             font-size: 60px;
             margin: 60px 1rem;
             width: 100%;
+        }
+    }
+
+    .header{
+        background: $white;
+        position: fixed;
+        top:0;
+        left: 0;
+        padding: 30px 40px;
+        transtion: padding 150ms;
+
+        &.min{
+            padding: 5px 30px;
+            transition: padding 150ms;
+            box-shadow: 0px 3px 3px rgba(0,0,0,.25);
+
+
+            .an-logo{
+            height: 40px;
+            width: 40px;
+            margin-bottom: -4px;
+//            transition: height 150ms, width 150ms, margin-bottom 150ms;
+
+            }
         }
     }
     .knewton-logo{
@@ -320,14 +363,18 @@ footer{
 }
 
 .open-this{
-    width:60px;
-    height: 60px;
-    background: url(../assets/open-this.png);
+    width:50px;
+    height: 50px;
+    background: url(../assets/open-this.svg) no-repeat center;
+    background-size: 100%;
     display: none;
     position: fixed;
-    top: 32px;
+    top: 3px;
     right: 0;
     margin-right: 60px;
+        &.min{
+            top: 1px;
+    }
 
     div{
     width:60px;
@@ -336,14 +383,15 @@ footer{
 }
 
 .close-this{
-    width: 60px;
-    height: 60px;
-    background: url(../assets/close-this.png) no-repeat left ;
+    width: 50px;
+    height: 50px;
+    background: url(../assets/close-this.svg) no-repeat left ;
+    background-size: 100%;
 
 
   div {
-    width:60px;
-    height: 60px;
+    width:50px;
+    height: 50px;
     }
 }
 
