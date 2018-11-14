@@ -4,15 +4,19 @@
 @import 'foundation';
 @import 'motion-ui';
 @import "bourbon";
+@import 'motion-ui';
+@include motion-ui-transitions;
+@include motion-ui-animations;
+
 
 @include foundation-global-styles;
-//@include foundation-grid;
-// @include foundation-flex-grid;
+@include foundation-grid;
+@include foundation-flex-grid;
 @include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
-// @include foundation-range-input;
+ @include foundation-range-input;
 @include foundation-accordion;
 @include foundation-accordion-menu;
 @include foundation-badge;
@@ -51,84 +55,434 @@
 @include foundation-flex-classes;
 
 // @include foundation-prototype-classes;
-
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
 
+
+@mixin chartValue($data){
+    $totalRows: 9;
+    $result: $totalRows - $data;
+    grid-row-start: $result;
+}
+
+//@for $i from 1 through $totalRows {
+//  .bar-#{$i} {
+//    @include chartValue($i);
+//  }
+//}
+
+
+
+
+
 //Personal Sizing Classes
-.full-height{
+.full-height {
     min-height: 100vh;
 }
-// My Sass
 
+// My Sass
 // Main CSS
-body {}
-a {color: $dark-gray}
-a:hover {color: $primary-color}
-a:active {color: $primary-color}
-h1{
+body {
+//  background-color: yellow;
+}
+
+a {
+    color: $dark-gray
+}
+
+a:hover {
+    color: $primary-color
+}
+
+a:active {
+    color: $primary-color
+}
+
+h1 {
     font-weight: bold;
-    margin:0;
+    margin: 0;
     vertical-align: middle;
 }
-h2{
+
+h2 {
     color: $dark-gray;
+    a {
+        color:$secondary-color;
+        text-decoration: underline;
+    }
+
 }
-h3{
+
+.tagline{
+        font-size: .875rem;
+
+    }
+
+h3 {
     color: $secondary-color;
     font-weight: bold;
     vertical-align: middle;
 }
-h4{
+
+h4 {
     color: $dark-gray;
 }
-h5{}
-h6{ font-family: "clarendon-text-pro";
+
+h5 {
+    margin:0;
+    padding: 10px 0 0 0;
+    a{
+        text-decoration: underline;
+    }
+}
+
+h6 {
+    font-family: "clarendon-text-pro";
     font-style: italic;
     font-weight: 700;
     width: 60%;
-    margin: 0 auto;}
-p{}
-button{}
-
-
-.container{
-background-color: $white;
+    margin: 0 auto;
 }
 
-.side-nav{
-    padding: 23px 30px 0px 30px;
+p {}
+
+button {}
+
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.main-col {
+    position: relative;
+//    padding-left: 250px;
+//    padding-top: 108px;
     transition: padding 150ms;
-    border-left: 1px solid $medium-gray;
+
+    @include breakpoint(large) {
+//            padding-left:250px;
+  }
+    @include breakpoint(small) {
+            padding-top:115px;
+  }
+    .an-logo {
+        background: url(../assets/penrose-a.svg) no-repeat center;
+        height: 108px;
+        width: 110px;
+        display: inline-block;
+        transition: height 150ms;
+    }
+    .hello-here {
+        display: inline-block;
+        padding-left: 15px;
+        margin-top: -4px;
+        max-width: 425px;
+        vertical-align: top;
+        display: inline-block;
+
+        @include breakpoint(small only){
+            display: block;
+            margin-top: 0;
+            padding-left: 0;
+        }
+
+        &.faq{
+            max-width: 650px;
+        }
+
+        h1 {
+            margin-top: -3px;
+            line-height: 38px;
+        }
+        h2 {
+            margin-top: 4px;
+        }
+    }
+
+    img {
+        margin: 30px 0 5px 0;
+    }
+
+
+    h4 {
+        padding: 0;
+        margin: 0;
+    }
+
+    h3 {
+        padding: 0;
+        margin: 0;
+    }
+
+    h2 {
+        padding: 0;
+        margin: 0;
+    }
+    p {
+        padding: 0;
+        margin: 0;
+    }
+    h6 {
+        margin: 0;
+        text-align: left;
+    }
+
+    .spacer {
+        background: $medium-gray;
+    }
+
+    .button {
+        margin: 30px auto;
+        font-size: 20px;
+        color: $primary-color;
+        background: $white;
+        font-weight: 700;
+        border: 2px solid $primary-color;
+        border-radius: 15px;
+        padding-left: 0;
+        padding-right: 0;
+
+        p {
+            color: $medium-gray;
+            display: inline-block;
+            font-size: .75rem;
+            transition: color 150ms;
+        }
+
+        &.download-button{
+//        min-height: 60px;
+//        background: url('../assets/download.svg')no-repeat top;
+//        background-size: 50%;
+        border: 2px solid $white;
+        padding: 0;
+            img{
+                margin: 0;
+                height: 50%;
+                width: 50%;
+            }
+            p{
+                vertical-align: bottom;
+                position: relative;
+                bottom:0;
+//                height: 60px;
+//                line-height: 100px;
+            }
+
+        }
+
+        &.download-button:hover{
+        background: $white;
+//        background-size: 50%;
+        border: 2px solid $white;
+        box-shadow: none;
+        transition: all 150ms;
+        }
+    }
+    .button:hover {
+        font-size: 20px;
+        border: 2px solid $primary-color;
+        background: lighten($primary-color, 35%);
+        color: $primary-color;
+        transition: background-color 150ms, border-radius 150ms, color 150ms;
+        box-shadow: 0px 3px 3px rgba(0, 0, 0, .25);
+        p {
+            color: $dark-gray;
+            display: inline-block;
+            font-size: .75rem;
+        }
+
+
+    }
+
+    .card-divider {
+        height: 30px;
+        background: $light-gray;
+        box-shadow: inset 0px 4px 9px -5px rgba(0, 0, 0, 0.55);
+    }
+
+    .dashed-divider {
+        border-top: 1px dashed $medium-gray;
+        margin-top: 15px;
+        padding-top: 30px;
+    }
+
+
+    .img-padding {
+    }
+
+    .full-width-image {
+        img {
+            width: 100%;
+            transition: width 400ms;
+        }
+    }
+    .project-container {
+        padding: 0px 30px 30px 30px;
+        &:first-child{
+            padding-bottom: 0;
+        }
+        &.knewton{
+            box-shadow: none;
+        }
+
+        h1 {}
+
+        h3 {
+            display: inline-block;
+            vertical-align: middle;
+            color: $secondary-color;
+            font-weight: 900;
+            padding: 2px 5px 2px 0;
+        }
+        .cat-roles {
+            text-align: left;
+            float: right;
+        }
+
+        h4 {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        &.work-samples {
+            padding: 15px 30px;
+            border-bottom: 1px dashed $medium-gray;
+        }
+
+        .down-arrows img {
+            height: 26px;
+            margin: 10px 5px 0 5px;
+            vertical-align: middle;
+        }
+
+        .client-name {
+            color: $dark-gray;
+        }
+        .client-lockup {
+            margin: 15px 0;
+        }
+    }
+
+    .content{
+        padding-left: 0;
+
+        @include breakpoint(medium) {
+              padding-left:250px;
+      }
+    }
+
+    .intro {
+//        position: relative;
+        .h2 {
+            font-size: 24px;
+        }
+        .prism {}
+        h6 {
+            text-align: left;
+            font-size: 3.25rem;
+            margin: 80px 1rem 60px 1rem;
+            width: 100%;
+        }
+    }
+    header{
+        max-width: 1400px;
+        margin: 0 auto;
+        padding-left: 30px;
+//        background: darkblue;
+    }
+    .header {
+        background: $white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 30px 0 0 0;
+        transition: padding 150ms;
+        z-index: 10;
+
+        &.min {
+            padding: 5px 0px;
+            transition: padding 150ms;
+            box-shadow: 0px 3px 3px rgba(0, 0, 0, .25);
+
+
+            .an-logo {
+                height: 40px;
+                width: 40px;
+                margin-bottom: -4px;
+                //            transition: height 150ms, width 150ms, margin-bottom 150ms;
+            }
+        }
+    }
+    .knewton-logo {
+        background: url('../assets/knewton-logo.png') no-repeat top;
+    }
+
+    .ga-jumbo {
+        min-height: 525px;
+        margin: 0 auto;
+        background: #000 url(../assets/GA.png) no-repeat center;
+        margin: 30px 0 0 0;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    .ob-jumbo {
+        min-height: 525px;
+        margin: 0 auto;
+        background: #fff url(../assets/OB.png) no-repeat center;
+        margin: 0 0 15px 0;
+
+        img {
+            margin: 0 auto;
+        }
+    }
+}
+
+
+
+.side-nav {
+    padding: 0px 30px 0px 30px;
+//    transition: padding 150ms;
+    border-right: 1px solid $medium-gray;
     min-width: 250px;
     max-width: 250px;
-    transition: right 500ms;
+    margin-top: 50px;
+    transition: margin-top 300ms;
     position: fixed;
-    right:0;
-    top:0;
     background: $white;
-    z-index: 1000;
+//    background: yellow;
+//    display:block;
+    height: 100%;
 
+    @include breakpoint(medium down){
+        right: -250px;
+    }
     &.min {
-        padding-top:1px;
+        padding-top: 1px;
         transition: padding-top 150ms;
     }
 
-    .menu-arrow{
+    .menu-arrow {
         background: url(../assets/arrow-collapse.png) no-repeat right;
     }
-    .menu a{
+    .menu a {
         margin: 0;
         padding: .6rem 0 .5rem 0;
     }
-    ul{
-        li{}
-        padding-top: 85px;
-        h2{
+    ul {
+        li {}
+        padding-top: 0;
+        h2 {
             font-weight: bold;
             margin: 0;
             padding: 0;
+            font-size: .875rem;
         }
 
         a {
@@ -147,259 +501,242 @@ background-color: $white;
 
 }
 
-.main-col{
-    position:relative;
-    padding-right: 250px;
-    padding-top: 180px;
+
+
+
+.faq {
+//    padding: 50px 10px;
+    margin-top: 60px;
+    a {
+        color: $dark-gray;
+    }
+    p {
+        font-size: $small-font-size;
+        padding: 20px;
+    }
+}
+
+.accordion-title {
+    border-left: none;
+    border-right: none;
+
+}
+
+.accordion-content {}
+
+footer {
+    padding: 30px 0 30px 0;
     transition: padding 150ms;
 
-    .an-logo{
-        background: url(../assets/penrose-a.svg) no-repeat center;
-        height: 100px;
-        width: 97px;
-        display: inline-block;
-        transition: height 150ms;
-    }
-    .hello-here{
-        display: inline-block;
-        padding-left: 15px;
-        margin-top: -4px;
-        width: 360px;
-        vertical-align: top;
-        display: inline-block;
-
-        h1{
-            margin-top: -3px;
-            line-height: 38px;
-        }
-        h2{
-            margin-top: 4px;
-        }
-    }
-
-    img {margin: 0 0 5px 0;}
-
-
-    h4 {padding:0;
-        margin:0;
-        }
-
-    h3 {padding:0;
-        margin:0;
-        }
-
-    h2 {padding:0;
-        margin:0;
-        }
-    p {padding:0;
-        margin:0;
-        }
-    h6{
-        margin:0;
-        text-align: left;
-    }
-
-    .spacer{
-        background: $medium-gray;
-    }
-
-    .button{
-        margin: 30px auto;
-        font-size: 20px;
-        color: $black;
-        background: $white;
-        font-weight: 700;
-        border: 2px solid $black;
-        border-radius: 15px;
-        width: 100%;
-
-    }
-    .button:hover{
-        font-size: 20px;
-        border: 2px solid $primary-color;
-        border-radius: 30px;
-        background: lighten($primary-color, 35%);
-        color: $primary-color;
-        transition: background-color 150ms, border-radius 150ms, color 150ms;
-        box-shadow: 0px 3px 3px rgba(0,0,0, .25);
-    }
-
-    .card-divider{
-        height: 30px;
-        background: $light-gray;
-        box-shadow: inset 0px 4px 9px -5px rgba(0,0,0,0.55);
-        }
-
-    .dashed-divider {
-            border-top: 1px dashed $medium-gray;
-            margin-top: 15px;
-            padding-top:30px;
-        }
-
-
-    .img-padding{
-        padding: 0 30px;
-        transition: padding 400ms;
-    }
-
-    .full-width-image{
-        img{
-        width: 100%;
-        transition: width 400ms;
-        }
-    }
-    .project-container{
-        padding: 0px 30px 45px 30px;
-        h1{}
-
-        h3{display: inline-block;
-            vertical-align: middle;
-//            background: $secondary-color;
-            color: $secondary-color;
-            font-weight: 900;
-            padding: 2px 5px;
-//            margin: 5px 5px 5px 30px;
-            }
-        .cat-roles{
-            text-align: right;
-            float: right;
-        }
-
-        h4
-        {display: inline-block;vertical-align: middle;}
-
-        &.work-samples{
-            padding: 15px 30px;
-            border-bottom: 1px dashed $medium-gray;
-            margin-bottom: 30px;
-        }
-
-        .down-arrows img{
-            height: 26px;
-            margin: 10px 5px 0 5px ;
-            vertical-align: middle;
-        }
-
-        .client-name{color:$dark-gray;}
-        .client-lockup{ margin: 15px 0;}
-    }
-
-    .intro{
-        position: relative;
-        .h2{
-            font-size: 24px;
-        }
-        .prism{}
-        h6{
-            text-align: left;
-            font-size: 60px;
-            margin: 60px 1rem;
-            width: 100%;
-        }
-    }
-
-    .header{
-        background: $white;
-        position: fixed;
-        top:0;
-        left: 0;
-        padding: 30px 40px;
-        transtion: padding 150ms;
-
-        &.min{
-            padding: 5px 30px;
-            transition: padding 150ms;
-            box-shadow: 0px 3px 3px rgba(0,0,0,.25);
-
-
-            .an-logo{
-            height: 40px;
-            width: 40px;
-            margin-bottom: -4px;
-//            transition: height 150ms, width 150ms, margin-bottom 150ms;
-
-            }
-        }
-    }
-    .knewton-logo{
-        background: url('../assets/knewton-logo.png') no-repeat top;
-    }
-
-    .ga-jumbo{
-        min-height: 525px;
-        margin: 0 auto;
-        background:#000 url(../assets/GA.png) no-repeat center;
-        margin: 0 0 15px 0;
-
-        img{
-            margin: 0 auto;
-        }
-    }
-
-    .ob-jumbo{
-    min-height: 525px;
-    margin: 0 auto;
-    background:#fff url(../assets/OB.png) no-repeat center;
-    margin: 0 0 15px 0;
-
-    img{
-        margin: 0 auto;
-    }
-    }
-}
-
-
-.faq{
-    a{color:$dark-gray;}
-    p{font-size:$small-font-size}
-}
-
-footer{
-    padding-bottom: 30px;
-    padding-right: 250px;
-    padding: 30px 250px 30px 0;
-    position: relative;
-    bottom:0 ;
+    height: 100px;
     margin: 0 auto;
     width: 100%;
-
 }
 
-.open-this{
-    width:50px;
+.open-this {
+    width: 50px;
     height: 50px;
     background: url(../assets/open-this.svg) no-repeat center;
     background-size: 100%;
-    display: none;
+//    display: none;
     position: fixed;
     top: 25px;
     right: 0;
     margin-right: 30px;
-        &.min{
-            top: 1px;
+
+    @include breakpoint(small only){
+        margin-right: 20px;
+    }
+    &.min {
+        top: 1px;
     }
 
-    div{
-    width:60px;
-    height: 60px;
+    div {
+        width: 60px;
+        height: 60px;
     }
 }
 
-.close-this{
+.close-this {
     width: 50px;
     height: 50px;
-    background: url(../assets/close-this.svg) no-repeat left ;
+    background: url(../assets/close-this.svg) no-repeat left;
     background-size: 100%;
-    &.min{
+    &.min {
         margin-top: -23px;
         transition: margin-top 150ms;
     }
 
-  div {
-    width:50px;
-    height: 50px;
+    div {
+        width: 50px;
+        height: 50px;
     }
 }
 
-.cass{}
+.cass {}
 
+
+//inputs and forms
+.contact-form {}
+
+.reveal {
+    padding: 0px 20px 20px 20px;
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+}
+
+input{
+
+}
+[type=text],
+textarea {
+    border-color: $medium-gray;
+    padding: 10px;
+    margin-top: 2px;
+    border-radius: 3px;
+    resize: vertical;
+}
+
+textarea{
+    min-height: 90px;
+}
+
+input[type=submit] {
+    margin: 30px auto;
+    font-size: 1.25rem;
+    color: $primary-color;
+    background: $white;
+    font-weight: 700;
+    border: 2px solid $primary-color;
+    border-radius: 10px;
+    width: 100%;
+    padding: 20px;
+}
+
+
+input[type=submit]:hover {
+    font-size: 1.25rem;
+    border: 2px solid $primary-color;
+    border-radius: 30px;
+    background: lighten($primary-color, 35%);
+    color: $primary-color;
+    transition: background-color 150ms, border-radius 150ms, color 150ms;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .25);
+    cursor: pointer;
+}
+
+
+
+//accordion
+.accordion-item.is-active {
+    background: $light-gray;
+}
+
+.accordion-title:hover {
+    background: lighten($primary-color, 35%)
+}
+
+//gif
+.gif-animation{
+    width: 100%;
+    min-height: 200px;
+    margin: 0 auto;
+    background: red;
+    background: url(../assets/penrose-large.gif) no-repeat top;
+
+    p{
+        color: $primary-color;
+        font-size: 1.25em;
+        padding-top: 215px;
+        font-weight: 700;
+        text-align: center;
+    }
+}
+
+//faq page
+.main-col-height {
+    min-height: 1200px;
+}
+
+.is-reveal-open {
+overflow: visible;
+}
+
+
+.reveal-overlay {
+overflow-y: hidden;
+}
+
+.random-bars{
+    width: 20%;
+    height: 50px;
+    margin: 0;
+    transition: height 250ms;
+    display: table;
+    table-layout: fixed;
+    transition: height 150ms ease-in;
+
+        li {
+        position: relative;
+        display: table-cell;
+        vertical-align: bottom;
+        }
+
+    .bars{
+        margin: 0 10px;
+        background-color: $primary-color;
+        display: block;
+        height: 100%;
+        width: 20px;
+        transition: height 150ms ease-in;
+
+
+        &:hover{
+            height: 50%;
+            }
+        }
+
+}
+
+.about-timeline{
+  padding: 30px;
+  padding-top: 15px;
+  border-top: 1px solid $light-gray;
+  h1{
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+//media queries
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+           .main-col .content{padding-left: 0; transition: all 150ms ease-in-out}
+}
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+            .main-col .project-container .cat-roles {
+            text-align: right;
+            float: right;
+        }
+}
+
+p.disclaimer{
+    color: $white;
+    background: $secondary-color;
+    border-radius: 0px;
+    padding: 10px 10px 10px 30px;
+}
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

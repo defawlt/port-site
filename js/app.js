@@ -7,78 +7,100 @@ $(document).foundation();
 
 //import $ from 'jquery';
 
-//window.$ = $;
-//window.jQuery = $;
+window.$ = $;
+window.jQuery = $;
+
+
 
 $(document).ready(function() {
-//        testing the jquery load
-//      alert("document ready occurred!");
-//    $('.cass').click (function() {
-//        alert("cassy cass was clicked");
-//        });
-//    $('.knew').click (function() {
-//        alert("KNEWTON was clicked");
-//        });
 
-//Toggle the side nav
+    
+//$(window).on('changed.zf.mediaquery', function(event, newSize, oldSize){
+//    // Inital state small -> medium 
+//    console.log(newSize); // should return medium
+//    
+//    if (Foundation.MediaQuery.atLeast('large')) {
+//      // True if large
+//      // False if medium or small
+//        $('.close-this').click (function() {
+//            $('.main-col').css({"padding-right":"0"});
+//            $('footer').css({"padding-right":"0"});
+//        });
+//
+//    $('.open-this').click (function() {
+//            $('.main-col').css({"padding-right":"250px"});
+//            $('footer').css({"padding-right":"250px"});
+//
+//        });
+//
+//    }
+//
+//
+//
+//});//end of watch
 
-//Toggle Menu icon
-$('.close-this').click (function() {
-        $(this).css({"opacity":"0"});
-        $('.open-this').toggle();
-        $('.side-nav').css({"right":"-250px"});
+ 
+//$('.close-this').click (function() {
+//        $(this).css({"opacity":"0"});
+//        $('.side-nav').css({"right":"-250px"});
+//
+//
+//    });
+//$('.open-this').click (function() {
+//        $('.close-this').css({"opacity":"1"});
+//        $('.side-nav').css({"right":"0"});
+//
+//    });    
+    
+if (Foundation.MediaQuery.atLeast('large')) {
+  // True if large
+  // False if medium or small
+    $('.close-this').click (function() {
         $('.main-col').css({"padding-right":"0"});
-        $('.img-padding').css({"padding":"0"})
         $('footer').css({"padding-right":"0"});
-
     });
-
+    
 $('.open-this').click (function() {
-        $(this).toggle();
-        $('.close-this').css({"opacity":"1"});
-        $('.side-nav').css({"right":"0"});
+
         $('.main-col').css({"padding-right":"250px"});
-        $('.img-padding').css({"padding":"0 30px"})
-        $('footer').css({"padding-right":"30"});
+        $('footer').css({"padding-right":"250px"});
 
     });
+    
+}
 
-//Scroll to Position on Home page
-//Scroll Top of page
-$('.an-logo').click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 600);
-    return false;
-});
 
-//Scroll Cassandra Tile
+//}
+
+//Scroll to Cassandra Tile
 $(function() { $(".cass").click(function() {
     var position = $(".cassandra").offset().top;
     $("HTML, BODY").animate({ scrollTop: position }, 500);
     });
 });
 
-//Scroll Knewton Tile
+//Scroll to Knewton Tile
 $(function() { $(".knew").click(function() {
     var position = $(".knewton").offset().top;
     $("HTML, BODY").animate({ scrollTop: position }, 500);
     });
 });
 
-//Scroll General Assembly Tile
+//Scroll to General Assembly Tile
 $(function() { $(".gene").click(function() {
     var position = $(".ga").offset().top;
     $("HTML, BODY").animate({ scrollTop: position }, 500);
     });
 });
 
-//Scroll Spring Tile
+//Scroll to Spring Tile
 $(function() { $(".spri").click(function() {
     var position = $(".spring").offset().top;
     $("HTML, BODY").animate({ scrollTop: position }, 500);
     });
 });
 
-//Scroll Outbrain Tile
+//Scroll to Outbrain Tile
 $(function() { $(".outb").click(function() {
     var position = $(".outbrain").offset().top;
     $("HTML, BODY").animate({ scrollTop: position }, 500);
@@ -98,17 +120,23 @@ $(window).scroll(function() {
         $('.close-this').addClass('min');
         $('.open-this').addClass("min");
         $(".hello-here").css("display","none");
+        $('.side-nav').css('margin-top','-15px');
     } else{
         $(".header").removeClass("min");
         $('.close-this').removeClass('min');
         $('.open-this').removeClass("min");
         $(".hello-here").css("display","inline-block");
+        $('.side-nav').css('margin-top','50px');
     }
 
 });
 
 
-
+//Open Modal via JS
+$(".contactMe").click (function(){
+    $('#contactModal').foundation('open');
+});
+    
 
 
 });

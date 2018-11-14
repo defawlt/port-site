@@ -1,7 +1,18 @@
 <!doctype html>
 
+
 <html class="no-js" lang="en">
   <head>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114671427-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-114671427-1');
+    </script>
+    
     <script src="https://use.typekit.net/mni4mnw.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <meta charset="utf-8">
@@ -13,32 +24,59 @@
   <body>
         <div class="container grid-x cell small-margin-collapse">
 
+
+
+<!--MAIN COLUMN-->
+
+        <div class="main-col auto cell main-col-height">
+                  <!-- header begins--> 
+        <div class="small-12 cell header">
+            <header>
+            <a href="index.html"><div class="an-logo ">
+            </div></a>
+            <div class="hello-here faq">
+                <h1 class="align-to-header">FAQ</h1>
+                <h2 class="tagline">Having been on different sides of the fence, as a designer, hiring mangager, as well as an instructor, I've come across a number of questions over and over in the industry. Here are a list of a few of them. I will add as time goes on.   </h2>
+
+            </div>
+<!--            <div class="open-this cell"><div></div></div>-->
+            </header>
+        </div>
+<!-- header ends--> 
+          
+          
 <!--MENU-->
              <div class="side-nav small-2 cell">
 
-                <div class="grid-x cell">
-                    <div class="an-logo small-6 cell"><img src="#" ></div>
-                    <div class="menu-arrow small-6 cell"><img src="#"></div>
+      <!--  used to close the side menu --- still needed for mobile-->
+               <!--
+                <div class="grid-x cell close-this ">
+                        <a><div></div></a>
                 </div>
+-->
 
                   <ul class="vertical menu align-left full-height">
-                    <li><a href = "#"><h2>About</h2></a></li>
-                    <li><a href = "#"><h2>Select Work</h2></a></li>
+
+                    <li><a href = "index.html"><h2>Past Work</h2></a></li>
+<!--
                         <ul class="nested vertical menu">
-                            <li><a href="#">Cassandra</a></li>
-                            <li><a href="#">Knewton</a></li>
-                            <li><a href="#">General Assembly</a></li>
-                            <li><a href="#">Spring</a></li>
-                            <li><a href="#">Outbrain</a></li>
+                               <li class="knew"><a>Knewton</a></li>
+                            <li class="cass"><a>Cassandra</a></li>
+                            <li class="gene"><a>General Assembly</a></li>
+                            <li class="spri"><a>Spring</a></li>
+                            <li class="outb"><a>Outbrain</a></li>
                         </ul>
+-->
+                    <li><a href="about.html"><h2>About</h2></a></li>
                     <li><a href="faq.html"><h2>Faq</h2></a></li>
-                    <li><a href = "#"><h2>Contact</h2></a></li>
+                    <li><a class="contactMe"><h2>Contact</h2></a></li>
                 </ul>
             </div>
 <!--MENU ENDS-->
-
-<!--MAIN COLUMN-->
-        <div class="main-col auto cell">
+           
+<!--   begin content               -->
+<div class="content">
+           
             <div class="faq small-12 cell">
                 <ul class="accordion" data-accordion>
                     <li class="accordion-item" data-accordion-item>
@@ -116,13 +154,18 @@ This is a good 3 year old argument but comes down to few observations.
 		3. A Boat.
                         </p>
                     </li>
+<!--
                     <li class="accordion-item" data-accordion-item>
                         <a class="accordion-title" href="#">What is the largest team that you‘ve managed?</a>
                         <p class="accordion-content" data-tab-content></p>
                     </li>
+-->
+<!--
                     <li class="accordion-item" data-accordion-item>
                         <a class="accordion-title" href="#">What software do you use?</a>
-                        <p class="accordion-content" data-tab-content></p>
+                        <p class="accordion-content" data-tab-content>
+                            Particular software is far less important that the ideas you're trying to communicate, my favorite tools
+                        </p>
                     </li>
                     <li class="accordion-item" data-accordion-item>
                         <a class="accordion-title" href="#">What’s your most valuable skill?</a>
@@ -135,6 +178,7 @@ This is a good 3 year old argument but comes down to few observations.
                     <li class="accordion-item" data-accordion-item>
                         <a class="accordion-title" href="#">What is UX design?</a>
                         <p class="accordion-content" data-tab-content></p>
+-->
 <!--
 
                    <Snippet for accordion so that I don't have to re-write it
@@ -145,21 +189,79 @@ This is a good 3 year old argument but comes down to few observations.
 
                 </ul>
             </div>
-
+      </div>
+<!--      content ends-->
 
      </div>
 
 <!--   MAIN COlUMN Ends -->
 
+
+       
+       
+       
         </div>
 <!--Container Ends-->
-        <footer class="dashed-divider small-12 class">
+    
+ <!-- Modals and Contact Form -->
+    <div class="reveal" id="contactModal" 
+            data-reveal
+            data-reset-on-close='true'
+           data-animation-in='fade-in' 
+           data-animation-out='fade-out'>
+
+         
+                        
+<!-- Contact Form -->
+<form name="htmlform" method="post" action="insert.php" class="contact-form">
+
+    <div class="grid-container">
+       <div class="gif-animation">
+        
+            <p>Drop me a Line and I will respond pronto(-ish.)!</p>
+       </div>
+       
+      
+       
+        <div class="grid-x grid-padding-x">
+            <div class="medium-12 cell">
+                <label>Your Name
+                    <input type="text" placeholder="Enter Your Name" name="name" id="name">
+                </label>
+            </div>
+            <div class="medium-12 cell">
+                    <label>Your Email
+                        <input type="email" placeholder="Enter Your Email Address" name="email" id="email">
+                    </label>
+            </div>
+            <div class="medium-12 cell">
+                    <label>What's up?
+                        <textarea type="text" placeholder="How Can I help?" name="help"></textarea>
+                    </label>
+            </div>
+            
+                    
+            
+            <input class="sendButton" type="submit" name="Submit" value="Send">
+        </div>
+    </div>
+</form>
+
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+<!--                   End Contact Form                          --> 
+       
+<!--Footer Begins       -->
+       
+<footer class="dashed-divider small-12 class">
             <ul class="menu small-12 class align-center">
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a class="contactMe">Contact</a></li>
             </ul>
-        </footer>
+</footer>
 
 <!--scripts-->
     <script src="bower_components/jquery/dist/jquery.js"></script>

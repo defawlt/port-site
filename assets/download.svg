@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="51px" viewBox="0 0 48 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>download</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="-" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-177.000000, -245.000000)">
+        <g id="download" transform="translate(179.000000, 245.000000)">
+            <path d="M6.57385713,18.7529663 L39.4869477,18.7529663 C40.3153749,18.7529663 40.9869477,19.4245392 40.9869477,20.2529663 C40.9869477,21.0813934 40.3153749,21.7529663 39.4869477,21.7529663 L6.82108996,21.7529663 L13.4143645,38.470199 C13.7183105,39.2408534 13.3399685,40.1119892 12.5693141,40.4159353 C11.7986596,40.7198813 10.9275238,40.3415394 10.6235777,39.5708849 L2.87353512,19.9206692 L10.7945471,0.164478447 C11.102839,-0.604447811 11.9760969,-0.977865718 12.7450231,-0.669573793 C13.5139494,-0.361281868 13.8873673,0.51197601 13.5790754,1.28090227 L6.57385713,18.7529663 Z" id="dowload" fill="#979797" fill-rule="nonzero" transform="translate(21.930241, 19.871617) rotate(-90.000000) translate(-21.930241, -19.871617) "></path>
+            <polyline id="Path-5" stroke="#979797" stroke-width="3" stroke-linecap="round" points="0.235417203 39.3310547 0.235417203 48.5345718 43.6250656 48.5345718 43.6250656 38.9283237"></polyline>
+        </g>
+    </g>
+</svg>

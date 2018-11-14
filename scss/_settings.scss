@@ -70,9 +70,10 @@ $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $foundation-palette: (
   primary: #62ccc6,
-  secondary: #C37777,
+  secondary: #cc6268,
   success: #3adb76,
-  warning: #ffae00,
+//  warning: #ffae00,
+  warning: #edd94f,
   alert: #cc4b37,
 );
 $light-gray: #eeeeee;
@@ -859,4 +860,3 @@ $grid-margin-gutters: (
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $block-grid-max: 8;
-
